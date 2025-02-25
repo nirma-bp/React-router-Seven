@@ -5,7 +5,9 @@ function Layout() {
   return (
     <div>
       <Navbar />
-      <Outlet />
+      <main>
+        <Outlet /> {/* Nested routes will render here */}
+      </main>
     </div>
   );
 }
