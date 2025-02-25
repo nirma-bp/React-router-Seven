@@ -55,6 +55,9 @@ import UsersPage from "./UsersPage";
 import { userLoader, usersLoader } from "./userLoader";
 import Layout from "./Layout";
 import ErrorBoundary from "./ErrorBoundary.js";
+import DashboardLayout from "./DashboardLayout.jsx";
+import Profile from "./Profile.jsx";
+import Settings from "./Settings.jsx";
 
 const router = createBrowserRouter([
   {
@@ -78,6 +81,20 @@ const router = createBrowserRouter([
             element: <UserPage />,
             loader: userLoader,
             errorElement: <ErrorBoundary />,
+          },
+        ],
+      },
+      {
+        path: "/dashboard",
+        element: <DashboardLayout />,
+        children: [
+          {
+            path: "profile",
+            element: <Profile />,
+          },
+          {
+            path: "settings",
+            element: <Settings />,
           },
         ],
       },

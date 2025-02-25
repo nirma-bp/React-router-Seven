@@ -85,6 +85,8 @@ function Navbar() {
               Users
             </Link>
           </li>
+          <br />
+          <br />
           <li>
             <Link
               to="/users"
@@ -93,6 +95,21 @@ function Navbar() {
             >
               View All Users
             </Link>
+          </li>
+          <li>
+            <Link
+              to="/dashboard"
+              className="hover:text-yellow-300"
+              onClick={() => setMenuOpen(false)}
+            >
+              Dashboard
+            </Link>
+          </li>
+          <li>
+            <Link href="/dashboard/profile">Profile</Link>
+          </li>
+          <li>
+            <Link href="/dashboard/settings">Settings</Link>
           </li>
         </ul>
       )}
